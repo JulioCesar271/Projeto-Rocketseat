@@ -1,0 +1,68 @@
+Como usar o HTML = Texto
+
+Para escrever algo - <p> texto</>
+Para escrever um site/url - <a href= "texto"> nome do link  </a>
+Para quebrar a linha <p>
+para escrever uma imagem - <img src="url do site" />
+
+Como usar o CSS = Estilo do HTML/Texto
+
+Para por cor no fundo - body{
+background: cor desejada;
+}
+
+Para por cor no texto - p{
+color: cor desejada;
+}
+
+Para dar prioridade a cor do texto - existe dois tipos de prioridade: unico-1 e class
+
+Para dar prioridade a cor do texto inico-1 - <p id="unico-1">texto</p>
+
+p#unico-1{
+color: cor desejada;
+}
+
+Para dar prioridade a cor do texto class - <p class="texto desejado">texto</p>
+
+.texto desejado{
+color: cor desejada;
+}
+
+Modelo box - todos os elementos do HTML considere eles uma caixa.
+Dentro de uma caixa contém: conteúdo(element content), largura(width), altura(height), borda(border), preenchimento(espaço interno)(padding), espaçamento(espaço externo)(margin)
+E você vai manipular esses elementos no css
+
+para por borda(border) no texto - No HTML escreva 
+<header>
+<h1>Título</h1>
+<p>informação
+<span>
+extra
+</span>
+</p>
+</header>
+
+No CSS escreva
+
+h1{
+border: escolha o tamanho ex:3px solid cor desejada ex: yellow;
+}
+
+Para por altura(heigth) no texto 
+h1{
+heigth: escolha o tamanho ex: 60px;
+}
+
+Para por espacamento externo(margin) no texto
+
+h1{
+margin: escolha o tamanho ex:60px;
+}
+
+Para por espacamento interno(padding) no texto
+h1{
+padding: escolha o tamanho ex:10px 
+}
+
+HTTPS: Hyper Text Transfer Protocol Secure
