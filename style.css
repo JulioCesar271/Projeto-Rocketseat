@@ -10,7 +10,7 @@
   --surface-color:rgba(255, 255, 255, 0.05);
   --surface-color-hover:rgba(0, 0, 0, 0.02);
   --highlight-color:rgba(255, 255, 255, 0.2);
-  --switch-bg-url: url(assets/moon-stars.svg)
+  --switch-bg-url: url(assets/moon-stars.svg);
 }
 
 .light{
@@ -26,10 +26,10 @@
 body {
   /* ATALHO. background: image repeat position/size*/
   background: var(--bg-url) no-repeat top center/cover;
-  height: 100%;
+  height: 100vh;
 }
 /* texto */
-body{
+body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
@@ -37,7 +37,7 @@ body{
 #container {
   width: 100%;
   max-width: 588px;
-  margin: 56px auto;
+  margin: 56px auto 0px;
   padding: 0 24px;
 }
 /* espaçamento abaixo da foto*/
@@ -54,10 +54,9 @@ body{
   font-weight: 500;
   line-height: 24px;
   margin-top: 8px;
-
 }
-/*switch*/
 
+/*switch*/
 #switch{
   position: relative;
   width: 64px;
@@ -75,11 +74,16 @@ body{
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-out 0.4s;
 }
 
 .light #switch button{
-  right: 0;
-  left: initial;
+ animation: slide-in 0.4s forwards;
+}
+
+#switch button:hover{
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span{
@@ -88,6 +92,7 @@ body{
   height: 24px;
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
 }
@@ -102,7 +107,7 @@ ul{
  
 }
 ul li a{
-display: flex ;
+display: flex;
 align-items: center;
 justify-content: center;
 
@@ -153,10 +158,27 @@ footer {
 /*media queries*/
 @media (min-width: 700px){
     :root{
-      --br-url: url(./assets/br-desktop.jpg);
+      --br-url: url(./assets/bg-desktop.jpg);
     }
 
     .light{
-      --bg-url:url(./assets/br-desktop-light.jpg);
+      --bg-url: url(./assets/bg-desktop-light.jpg);
     }
+}
+@keyframes slide-in{
+  from{
+    left: 0;
+  }
+  to{ 
+    left: 50%;
+  }
+}
+
+@keyframes slide-out{
+  from{
+    left: 50%;
+  }
+  to{
+    left: 0;
+  }
 }
